@@ -39,5 +39,5 @@ if($num_regs == 1){
 	}
 		
 $conexao->close();
-header("Location: ../index.php?op=editar&mensagem=$mensagem");
+header("Location: ../../index.php?op=editar&mensagem=$mensagem");
 ?>

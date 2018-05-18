@@ -10,5 +10,5 @@ else
 	$mensagem = "Não foi possível deletar o registro!";
 
 $conexao->close();
-header("Location:../index.php?op=apagar&mensagem=$mensagem");
+header("Location: ../../index.php?op=apagar&mensagem=$mensagem");
 ?>
