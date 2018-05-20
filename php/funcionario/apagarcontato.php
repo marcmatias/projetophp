@@ -1,7 +1,6 @@
 <?php include("php/funcionario/mensagens.php");?>
 
-<form class="card" id="apagar-contato" name="apagar_frm" action=
-"php/funcionario/apagar-contato.php" method="post" enctype=
+<form class="card" id="apagar-contato" name="apagar_frm" action="php/funcionario/index.php" method="post" enctype=
 "application/x-www-form-urlencoded">
 	<div class="form-group card-body">
 		<fieldset>

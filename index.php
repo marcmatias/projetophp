@@ -11,10 +11,10 @@ switch($op){
 		$titulo = "Adicionar Contatos";
 		break;
 		
-	case "apagar":
-		$conteudo = "php/funcionario/apagarcontato.php";
-		$titulo = "Apagar Contatos";
-		break;
+	// case "apagar":
+	// 	$conteudo = "php/funcionario/apagarcontato.php";
+	// 	$titulo = "Apagar Contatos";
+	// 	break;
 
 	case "editar":
 		$conteudo = "php/funcionario/editarcontato.php";
@@ -49,32 +49,33 @@ switch($op){
 	<body>
 		<section id="conteudo">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-			  <a class="navbar-brand" href="#">Catalogo Telefônico</a>
+			  <a class="navbar-brand" href="index.php">Catalogo Telefônico</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			    <div class="navbar-nav">
-					<li><a class="config nav-item nav-link active" href="index.php"> Home </a></li>
-					<ul class="navbar-nav">
-				    <li class="nav-item dropdown">
-				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				          Gerenciar
-				        </a>
-				        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							<a class="config dropdown-item" href="?op=add"> Adicionar Contato </a>
-							<a class="config dropdown-item" href="?op=apagar"> Apagar Contato </a>
-							<a class="config dropdown-item" href="?op=editar"> Editar Contato </a>
-							<a class="config dropdown-item" href="?op=consultas"> Pesquisar Contato </a>
-				        </div>
-			        </li>
+					<li><a class="config nav-item nav-link" href="index.php"> Home </a></li>
+<!-- 					<ul class="navbar-nav">
+					    <li class="nav-item dropdown">
+					        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					          Gerenciar
+					        </a>
+					        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								<a class="config dropdown-item" href="?op=add"> Adicionar Contato </a>
+								<a class="config dropdown-item" href="?op=apagar"> Apagar Contato </a>
+								<a class="config dropdown-item" href="?op=editar"> Editar Contato </a>
+								<a class="config dropdown-item" href="?op=consultas"> Pesquisar Contato </a>
+					        </div>
+				        </li>
 					</li>
-			    </div>
+			    </div> -->
 			  </div>
 			</nav>
 		</section>
 		<section id="principal" style="display:none">
 			<div class="container" style="margin:25px auto;">
+				<!-- conteúdo php principal da pagina inicial -->
 				<?php include($conteudo); ?>
 			</div>
 		</section>
@@ -86,7 +87,7 @@ switch($op){
 		<!-- Mensagem de sucesso ou erro -->
 		<script type="text/javascript">
 			$("#principal").fadeIn();
-			$("#menssagem").fadeOut(4000);
+			$("#menssagem").fadeOut(3000);
 		    $('#example').DataTable( {
 		         "language": {
 				    "sEmptyTable": "Nenhum registro encontrado",

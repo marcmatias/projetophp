@@ -1,5 +1,5 @@
 <?php
-$email = $_POST["email_slc"];
+$email = $_GET["email_slc"];
 include("conexao.php");
 $consulta="DELETE FROM contatos WHERE email='$email'";
 
@@ -10,5 +10,5 @@ else
 	$mensagem = "Não foi possível deletar o registro!";
 
 $conexao->close();
-header("Location: ../../index.php?op=apagar&mensagem=$mensagem");
+header("Location: ../../index.php?&mensagem=$mensagem");
 ?>

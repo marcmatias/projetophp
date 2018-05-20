@@ -1,4 +1,4 @@
-<?php include("php/funcionario/mensagens.php"); ?>
+
 
 <form class="card" id="add-contato" name="add_frm" action="php/funcionario/adicionar-contato.php" 
 method="post" enctype="multipart/form-data"	>

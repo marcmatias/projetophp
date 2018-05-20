@@ -22,6 +22,7 @@ else
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Telefone</th>
+                <th>Ação</th>
             </tr>
         </thead>
         <tbody>
@@ -33,7 +34,10 @@ else
 					<td><?php echo ($registro["nome"]); ?></td>
                     <td><?php echo ($registro["email"]); ?></td>
                     <td><?php echo ($registro["telefone"]); ?></td>
-                    
+                    <td>
+                        <a href="index.php?op=editar&contato_slc=<?= $registro['id'] ?>" class="btn btn-primary">Edit</a>
+                        <a onclick="return confirm('Tem certeza que quer excluir essa entrada?')" href="php/funcionario/apagar-contato.php?email_slc=<?= $registro['email'] ?>" class='btn btn-danger'>Deletar</a>
+                    </td>
                 </tr>
             <?php
             }
@@ -51,9 +55,3 @@ else
 }
 $conexao->close();
 ?>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#example').DataTable();
-    });
-</script>

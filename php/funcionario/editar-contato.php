@@ -30,7 +30,7 @@ if($num_regs == 1){
 	$executar_consulta = $conexao->query(utf8_encode($consulta));
 	
 	if($executar_consulta)
-		$mensagem = "O contato foi Editado <b>$email</b>";
+		$mensagem = "O contato <b>$email</b> foi editado";
 	else
 		$mensagem = "Não foi possível editar o contato <b>$email</b>";
 	
@@ -39,5 +39,5 @@ if($num_regs == 1){
 	}
 		
 $conexao->close();
-header("Location: ../../index.php?op=editar&mensagem=$mensagem");
+header("Location: ../../index.php?mensagem=$mensagem");
 ?>

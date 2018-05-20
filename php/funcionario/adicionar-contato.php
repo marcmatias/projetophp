@@ -36,5 +36,5 @@ if($num_regs == 0){
 		$mensagem = "O registro não será feito, pois este contato já está cadastrado!";
 }
 $conexao->close();
-header("Location: ../../index.php?op=add&mensagem=$mensagem");
+header("Location: ../../index.php?mensagem=$mensagem");
 ?>
