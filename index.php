@@ -47,16 +47,16 @@ switch($op){
 		<!-- <script src="js/contato.js"> </script> -->
 	</head>
 	<body>
-		<section id="conteudo">
+		<header id="conteudo">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 			  <a class="navbar-brand" href="index.php">Catalogo Telefônico</a>
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
 			  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			    <div class="navbar-nav">
 					<li><a class="config nav-item nav-link" href="index.php"> Home </a></li>
-<!-- 					<ul class="navbar-nav">
+					<ul class="navbar-nav">
 					    <li class="nav-item dropdown">
 					        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					          Gerenciar
@@ -68,17 +68,17 @@ switch($op){
 								<a class="config dropdown-item" href="?op=consultas"> Pesquisar Contato </a>
 					        </div>
 				        </li>
-					</li>
-			    </div> -->
-			  </div>
+					</ul> 
+			    </div>
+			  </div> -->
 			</nav>
-		</section>
-		<section id="principal" style="display:none">
+		</header>
+		<main id="principal">
 			<div class="container" style="margin:25px auto;">
 				<!-- conteúdo php principal da pagina inicial -->
 				<?php include($conteudo); ?>
 			</div>
-		</section>
+		</main>
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
