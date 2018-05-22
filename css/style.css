@@ -1,5 +1,3 @@
-body{
-    height: 100%;
-    background: red;
-    background-color: red;
+#container{
+  margin:25px auto;
 }

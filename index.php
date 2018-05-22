@@ -1,7 +1,7 @@
 <?php
-mb_internal_encoding("UTF-8"); 
-mb_http_output( "iso-8859-1" );  
-ob_start("mb_output_handler");   
+mb_internal_encoding("UTF-8");
+mb_http_output( "iso-8859-1" );
+ob_start("mb_output_handler");
 header("Content-Type: text/html; charset=ISO-8859-1",true);
 error_reporting(E_ALL ^ E_NOTICE);
 $op = $_GET["op"];
@@ -10,7 +10,7 @@ switch($op){
 		$conteudo = "php/funcionario/addcontato.php";
 		$titulo = "Adicionar Contatos";
 		break;
-		
+
 	// case "apagar":
 	// 	$conteudo = "php/funcionario/apagarcontato.php";
 	// 	$titulo = "Apagar Contatos";
@@ -24,7 +24,7 @@ switch($op){
 	case "consultas":
 		$conteudo = "php/funcionario/consultas.php";
 		$titulo = "Pesquisar Contatos";
-		break;	
+		break;
 
 	default :
 		$conteudo = "php/funcionario/home.php";
@@ -38,11 +38,11 @@ switch($op){
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8" />
-		<title><?php echo $titulo; ?> </title>
-		<link rel="stylesheet" href="css/contato.css" />
+		<title><?php echo $titulo; ?></title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!-- <script src="js/contato.js"> </script> -->
 	</head>
@@ -68,27 +68,24 @@ switch($op){
 								<a class="config dropdown-item" href="?op=consultas"> Pesquisar Contato </a>
 					        </div>
 				        </li>
-					</ul> 
+					</ul>
 			    </div>
 			  </div> -->
 			</nav>
 		</header>
 		<main id="principal">
-			<div class="container" style="margin:25px auto;">
+			<div class="container" id="container">
 				<!-- conteúdo php principal da pagina inicial -->
 				<?php include($conteudo); ?>
 			</div>
 		</main>
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-		<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
-		<script	src="https://cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json"></script>
+		<script src="js/jquery.dataTables.min.js"></script>
+		<script src="js/dataTables.bootstrap4.min.js"></script>
 		<!-- Mensagem de sucesso ou erro -->
 		<script type="text/javascript">
-			$("#principal").fadeIn();
-			$("#menssagem").fadeOut(3000);
-		    $('#example').DataTable( {
+		    $('#datatable').DataTable( {
 		         "language": {
 				    "sEmptyTable": "Nenhum registro encontrado",
 				    "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",

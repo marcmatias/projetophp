@@ -6,7 +6,7 @@ if(empty($_GET["nome_slc"]))
 
 $executar_consulta = $conexao->query($consulta);
 $num_regs = $executar_consulta->num_rows;
- 
+
 //echo $num_regs;
 if($num_regs==0)
 {
@@ -17,7 +17,7 @@ else
 ?>
     <br /><br />
     <div class="table-responsive">
-        <table id="example" class="table table-striped table-bordered display nowrap" width="100%" cellspacing="0">
+        <table id="datatable" class="table table-striped table-bordered display nowrap" width="100%" cellspacing="0">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -27,7 +27,7 @@ else
                 </tr>
             </thead>
             <tbody>
-                <?php 
+                <?php
                 while($registro = $executar_consulta->fetch_assoc())
                 {
                 ?>
