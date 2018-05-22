@@ -83,7 +83,8 @@ switch($op){
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery.dataTables.min.js"></script>
 		<script src="js/dataTables.bootstrap4.min.js"></script>
-		<!-- Mensagem de sucesso ou erro -->
+		<script src="js/jquery.toaster.js"></script>
+		<!-- Datatable e mensagens -->
 		<script type="text/javascript">
 		    $('#datatable').DataTable( {
 		         "language": {
@@ -111,5 +112,6 @@ switch($op){
 				}
 		    } );
 		</script>
+		<?php include("php/funcionario/mensagens.php");?>
 	</body>
 </html>

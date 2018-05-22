@@ -24,17 +24,20 @@ if($num_regs == 0){
 	//sera executado a função para registrar no banco
 	include("functions.php");
 	$consulta = "INSERT INTO contatos (email,nome,sexo,nascimento,telefone,logradouro,log_numero,bairro,cidade,estado) VALUES ('$email','$nome','$sexo','$nascimento','$telefone','$rua','$numero','$bairro','$cidade','$estado')";
-	
+
 	$executar_consulta = $conexao->query(utf8_encode($consulta));
-	
+
 	if($executar_consulta)
-		$mensagem = "O contato foi registrado <b>$email</b>";
+		$mensagem = "O contato " .utf8_encode($nome). " foi registrado";
 	else
-		$mensagem = "Não foi possível registrar o contato <b>$email</b>";
-	
+		$mensagem = "Não foi possível registrar o contato " .utf8_encode($nome). ".";
+
 }	else{
 		$mensagem = "O registro não será feito, pois este contato já está cadastrado!";
 }
 $conexao->close();
-header("Location: ../../index.php?mensagem=$mensagem");
+
+session_start();
+$_SESSION['mensagem'] = $mensagem;
+header("Location: ../../index.php");
 ?>

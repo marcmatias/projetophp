@@ -1,9 +1,11 @@
 <?php
-if(isset($_GET["mensagem"])){
-	$mensagem = $_GET["mensagem"];
-	
-	echo "<div id='menssagem' class='alert alert-primary'> $mensagem </div>";
+session_start();
+$mensagem = $_SESSION['mensagem'];
+if($mensagem){
+	echo "<script type='text/javascript'>
+		$.toaster({ priority : 'info', title : 'Alerta', message : '$mensagem'});
+	</script>"
+	;
 }
-
-?>	
-	
+session_destroy();
+?>

@@ -25,19 +25,22 @@ if($num_regs == 1){
 	$consulta = "UPDATE contatos SET nome='$nome',email='$email', sexo='$sexo', nascimento='$nascimento',
 	telefone='$telefone', logradouro='$rua', log_numero='$numero', bairro='$bairro', cidade='$cidade', estado='$estado'
 	WHERE email='$email'";
-	
-	
+
+
 	$executar_consulta = $conexao->query(utf8_encode($consulta));
-	
+
 	if($executar_consulta)
-		$mensagem = "O contato <b>$email</b> foi editado";
+		$mensagem = "O contato " .utf8_encode($nome). " foi editado";
 	else
-		$mensagem = "Não foi possível editar o contato <b>$email</b>";
-	
+		$mensagem = "Não foi possível editar o contato " .utf8_encode($nome). ".";
+
 }	else{
 		$mensagem = "A edição não será feita, ocorreram problemas!";
 	}
-		
+
 $conexao->close();
-header("Location: ../../index.php?mensagem=$mensagem");
+
+session_start();
+$_SESSION['mensagem'] = $mensagem;
+header("Location: ../../index.php");
 ?>

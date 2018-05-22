@@ -10,5 +10,8 @@ else
 	$mensagem = "Não foi possível deletar o registro!";
 
 $conexao->close();
-header("Location: ../../index.php?&mensagem=$mensagem");
+
+session_start();
+$_SESSION['mensagem'] = $mensagem;
+header("Location: ../../index.php");
 ?>
