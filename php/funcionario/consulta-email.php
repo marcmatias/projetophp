@@ -7,13 +7,13 @@
 	</div>
 	<input type="submit" id="enviar-buscar" class="config btn btn-primary float-right" name="enviar_btn"
 value="Buscar" />
-</div>	
+</div>
 
 
 <?php
 if($_GET["email_txt"]!=null){
 	$email=$_GET["email_txt"];
-	$consulta = "SELECT * FROM contatos WHERE email like '%$email%'";
+	$consulta = "SELECT * FROM contato WHERE email like '%$email%'";
 	include("tabela-resultados.php");
 }
 ?>

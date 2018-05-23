@@ -1,4 +1,4 @@
-<?php 
-$consulta = "SELECT * FROM contatos";
+<?php
+$consulta = "SELECT * FROM contato";
 include("php/funcionario/tabela-resultados.php");
 ?>

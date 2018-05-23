@@ -11,10 +11,11 @@ $numero = $_POST["numero_txt"];
 $bairro = $_POST["bairro_txt"];
 $cidade = $_POST["cidade_txt"];
 $estado = $_POST["estado_txt"];
-
+$complemento = $_POST["complemento_txt"];
+$cep =$_POST["cep_txt"];
 //verificar se ja existe o email ja cadastrado
 include("conexao.php");
-$consulta = "select * from contatos WHERE email='$email'";
+$consulta = "select * from contato WHERE email='$email'";
 $executar_consulta = $conexao->query($consulta);
 
 $num_regs = $executar_consulta->num_rows;
@@ -22,8 +23,12 @@ $num_regs = $executar_consulta->num_rows;
 //se ja tem registros na tabela, ele fala que o email ja existe
 if($num_regs == 0){
 	//sera executado a função para registrar no banco
-	include("functions.php");
-	$consulta = "INSERT INTO contatos (email,nome,sexo,nascimento,telefone,logradouro,log_numero,bairro,cidade,estado) VALUES ('$email','$nome','$sexo','$nascimento','$telefone','$rua','$numero','$bairro','$cidade','$estado')";
+	// include("functions.php");
+
+	$consulta = "INSERT INTO contato (email,nome,sexo,nascimento,logradouro,numero,bairro,cidade,estado, complemento, cep) VALUES ('$email','$nome','$sexo','$nascimento','$rua','$numero','$bairro','$cidade','$estado', '$complemento', '$cep')";
+
+// início de planejamento de inserção de telefones
+// INSERT INTO `telefone` (`idcontato`, `idtelefone`, `telefone`) VALUES ('2', NULL, '121212121');
 
 	$executar_consulta = $conexao->query(utf8_encode($consulta));
 

@@ -1,7 +1,7 @@
 <?php
 $email = $_GET["email_slc"];
 include("conexao.php");
-$consulta="DELETE FROM contatos WHERE email='$email'";
+$consulta="DELETE FROM contato WHERE email='$email'";
 
 $executar_consulta = $conexao->query($consulta);
 if($executar_consulta)

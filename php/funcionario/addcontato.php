@@ -1,4 +1,4 @@
-<form class="card" id="add-contato" name="add_frm" action="php/funcionario/adicionar-contato.php" 
+<form class="card" id="add-contato" name="add_frm" action="php/funcionario/adicionar-contato.php"
 method="post" enctype="multipart/form-data"	>
 	<div class="form-group card-body">
 		<fieldset>
@@ -16,15 +16,19 @@ method="post" enctype="multipart/form-data"	>
 				<input type="radio" id="m" name="sexo_rdo" title="Sexo" value="M" required />&nbsp;<label for="m">Masculino</label>
 				&nbsp;&nbsp;&nbsp;
 				<input type="radio" id="f" name="sexo_rdo" title="Sexo" value="F" required />&nbsp;<label for="f">Feminino</label>
-				
+
 			</div>
 			<div class="form-group">
 				<label for="nascimento">Data de Nascimento: </label>
 				<input type="text" id="nascimento" class="config form-control" name="nascimento_txt" placeholder="Insira a data de nascimento" title="Data" required />
 			</div>
-			<div>
+			<!-- <div>
 				<label for="telefone">Telefone: </label>
 				<input type="text" id="telefone" class="config form-control" name="telefone_txt" placeholder="Insira o telefone" title="Telefone" required />
+			</div> -->
+			<div>
+				<label for="cep">CEP: </label>
+				<input type="text" id="cep" class="config form-control" name="cep_txt" placeholder="Insira o cep" title="cep" required />
 			</div>
 			<div class="form-group">
 				<label for="rua">Rua: </label>
@@ -33,12 +37,16 @@ method="post" enctype="multipart/form-data"	>
 			<div class="form-row">
 				<div class="col">
 					<label for="numero">Número: </label>
-					<input type="number" id="numero" class="config form-control" name="numero_txt" placeholder="Insira o número da casa" title="Número" required />
+					<input type="text" id="numero" class="config form-control" name="numero_txt" placeholder="Insira o número da casa" title="Número" required />
 				</div>
 				<div class="col">
-					<label for="bairro">Bairro: </label>
-					<input type="text" id="bairro" class="config form-control" name="bairro_txt" placeholder="Insira o bairro" title="Bairro" required />
+					<label for="rua">Complemento: </label>
+					<input type="text" id="complemento" class="config form-control" name="complemento_txt" placeholder="Insira complemento" title="Complemento" required />
 				</div>
+			</div>
+			<div class="form-group">
+				<label for="bairro">Bairro: </label>
+				<input type="text" id="bairro" class="config form-control" name="bairro_txt" placeholder="Insira o bairro" title="Bairro" required />
 			</div>
 			<div class="form-group">
 				<label for="cidade">Cidade: </label>
@@ -53,5 +61,4 @@ method="post" enctype="multipart/form-data"	>
 			</div>
 		</fieldset>
 	</div>
-</form>	
-
+</form>

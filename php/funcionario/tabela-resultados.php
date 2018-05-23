@@ -36,7 +36,7 @@ else
                         <td><?php echo ($registro["email"]); ?></td>
                         <td><?php echo ($registro["telefone"]); ?></td>
                         <td>
-                            <a href="index.php?op=editar&contato_slc=<?= $registro['id'] ?>" class="btn btn-primary">Edit</a>
+                            <a href="index.php?op=editar&contato_slc=<?= $registro['idcontato'] ?>" class="btn btn-primary">Edit</a>
                             <a onclick="return confirm('Tem certeza que quer excluir essa entrada?')" href="php/funcionario/apagar-contato.php?email_slc=<?= $registro['email'] ?>" class='btn btn-danger'>Deletar</a>
                         </td>
                     </tr>

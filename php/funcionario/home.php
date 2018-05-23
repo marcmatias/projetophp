@@ -9,7 +9,7 @@
 	<a href="index.php?op=add" class="btn btn-primary text-left" style="margin-left: 15px">Adicionar Contato</a>
 	<span class="text-center">
 		<?php
-			$consulta = "SELECT * FROM contatos";
+			$consulta = "SELECT * FROM contato";
 			include("php/funcionario/tabela-resultados.php");
 		?>
 	</span>

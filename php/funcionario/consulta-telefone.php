@@ -7,11 +7,11 @@
 	</div>
 	<input type="submit" id="enviar-buscar" class="config btn btn-primary float-right" name="enviar_btn"
 value="Buscar" />
-</div>	
+</div>
 <?php
 if($_GET["telefone_txt"]!=null){
 	$telefone=$_GET["telefone_txt"];
-	$consulta = "SELECT * FROM contatos WHERE telefone like '%$telefone%'";
+	$consulta = "SELECT * FROM contato WHERE telefone like '%$telefone%'";
 	include("tabela-resultados.php");
 }
 ?>
