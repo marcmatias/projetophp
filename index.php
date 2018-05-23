@@ -40,9 +40,10 @@ switch($op){
 		<meta charset="utf-8" />
 		<title><?php echo $titulo; ?></title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap4.min.css">
+		<link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
+		<link rel="stylesheet" href="css/materialicons.css">
+		<link rel="stylesheet" href="css/style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<!-- <script src="js/contato.js"> </script> -->
 	</head>
