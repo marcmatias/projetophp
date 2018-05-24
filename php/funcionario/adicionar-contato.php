@@ -5,7 +5,9 @@ $email = $_POST["email_txt"];
 $nome = $_POST["nome_txt"];
 $sexo = $_POST["sexo_rdo"];
 $nascimento = $_POST["nascimento_txt"];
-$telefone = $_POST["telefone_txt"];
+$telefone0 = $_POST["telefone0_txt"];
+$telefone1 = $_POST["telefone1_txt"];
+$telefone2 = $_POST["telefone2_txt"];
 $rua = $_POST["rua_txt"];
 $numero = $_POST["numero_txt"];
 $bairro = $_POST["bairro_txt"];
@@ -13,6 +15,7 @@ $cidade = $_POST["cidade_txt"];
 $estado = $_POST["estado_txt"];
 $complemento = $_POST["complemento_txt"];
 $cep =$_POST["cep_txt"];
+
 
 //verificar se ja existe o email ja cadastrado
 include("conexao.php");
@@ -30,23 +33,40 @@ if($num_regs == 0){
 
 	$executar_consulta = $conexao->query(utf8_encode($consulta));
 
-	// início de planejamento de inserção de telefones
-	// $consulta = "INSERT INTO `telefone` (`idcontato`, `idtelefone`, `telefone`) VALUES ('2', NULL, '2222')";
-	//
-	// $executar_consulta = $conexao->query(utf8_encode($consulta));
-	// $id = $conexao->insert_id;
+	// inserção de telefones
+	$id = "SELECT idcontato FROM contato WHERE email like '$email'";
+	$executar_consulta = $conexao->query(utf8_encode($id));
+	$row = $executar_consulta->fetch_assoc();
+	$id = $row['idcontato'];
 
-	if($executar_consulta)
+	$array = array();
+	for ($i=0; $i < 3; $i++) {
+		$telefone = ${'telefone' . $i};
+		if (!empty($telefone)) {
+			$array[] = $telefone;
+		}
+	}
+
+	foreach ($array as $key => $value) {
+		$telefone = $value;
+		$consulta = "INSERT INTO `telefone` (`idcontato`,`idtelefone`,`telefone`) VALUES ($id, NULL, $telefone)";
+		$executar_consulta2 = $conexao->query(utf8_encode($consulta));
+	}
+
+
+	if($executar_consulta and $executar_consulta2)
 		$mensagem = "O contato " .utf8_encode($nome). " foi registrado";
 	else
 		$mensagem = "Não foi possível registrar o contato " .utf8_encode($nome). ".";
 
-}	else{
+	}	else{
 		$mensagem = "O registro não será feito, pois este contato já está cadastrado!";
-}
+	}
+
 $conexao->close();
 
 session_start();
 $_SESSION['mensagem'] = $mensagem;
 header("Location: ../../index.php");
+
 ?>

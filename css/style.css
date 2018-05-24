@@ -7,3 +7,6 @@
 .icons{
   font-size: 15px;
 }
+table.dataTable tbody td {
+  vertical-align: middle;
+}

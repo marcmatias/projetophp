@@ -40,9 +40,9 @@ if($num_regs == 1){
 
 	// $consulta = "INSERT INTO `telefone` (`idcontato`,`idtelefone`,`telefone`) VALUES ($id, NULL, $telefone)";
 
-	$executar_consulta = $conexao->query(utf8_encode($consulta));
+	$executar_consulta2 = $conexao->query(utf8_encode($consulta));
 
-	if($executar_consulta)
+	if($executar_consulta and $executar_consulta2)
 		$mensagem = "O contato " .utf8_encode($nome). " foi editado";
 	else
 		$mensagem = "Não foi possível editar o contato " .utf8_encode($nome). ".";

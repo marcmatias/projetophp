@@ -16,17 +16,24 @@ method="post" enctype="multipart/form-data"	>
 				<input type="radio" id="m" name="sexo_rdo" title="Sexo" value="M" required />&nbsp;<label for="m">Masculino</label>
 				&nbsp;&nbsp;&nbsp;
 				<input type="radio" id="f" name="sexo_rdo" title="Sexo" value="F" required />&nbsp;<label for="f">Feminino</label>
-
 			</div>
 			<div class="form-group">
 				<label for="nascimento">Data de Nascimento: </label>
-				<input type="text" id="nascimento" class="config form-control" name="nascimento_txt" placeholder="Insira a data de nascimento" title="Data" required />
+				<input type="date" id="nascimento" class="config form-control" name="nascimento_txt" placeholder="Insira a data de nascimento" title="Data" required />
 			</div>
-			<!-- <div>
+			<div class="form-group">
 				<label for="telefone">Telefone: </label>
-				<input type="text" id="telefone" class="config form-control" name="telefone_txt" placeholder="Insira o telefone" title="Telefone" required />
-			</div> -->
-			<div>
+				<input type="text" id="telefone0" class="config form-control telefone" name="telefone0_txt" placeholder="Insira o telefone" title="Telefone" required />
+			</div>
+			<div class="form-group">
+				<label for="telefone1">Celular: </label>
+				<input type="text" id="telefone1" class="config form-control telefone" name="telefone1_txt" placeholder="Insira o celular" title="Celular" />
+			</div>
+			<div class="form-group">
+				<label for="telefone2">Telefone Trabalho: </label>
+				<input type="text" id="telefone2" class="config form-control telefone" name="telefone2_txt" placeholder="Insira o telefone do trabalho" title="Telefone" />
+			</div>
+			<div class="form-group">
 				<label for="cep">CEP: </label>
 				<input type="text" id="cep" class="config form-control" name="cep_txt" placeholder="Insira o cep" title="cep" required />
 			</div>
@@ -34,7 +41,7 @@ method="post" enctype="multipart/form-data"	>
 				<label for="rua">Rua: </label>
 				<input type="text" id="rua" class="config form-control" name="rua_txt" placeholder="Insira o nome da rua" title="Rua" required />
 			</div>
-			<div class="form-row">
+			<div class="form-row form-group">
 				<div class="col">
 					<label for="numero">Número: </label>
 					<input type="text" id="numero" class="config form-control" name="numero_txt" placeholder="Insira o número da casa" title="Número" required />

@@ -29,7 +29,7 @@
 	</div>
 	<div class="form-group">
 		<label for="nascimento">Data de Nascimento: </label>
-		<input type="text" id="nascimento" class="config form-control" name="nascimento_txt"
+		<input type="date" id="nascimento" class="config form-control" name="nascimento_txt"
 		placeholder="Insira a data de nascimento" title="Data"
 		value="<?php echo $registro_contato["nascimento"]; ?>"
 		required />
