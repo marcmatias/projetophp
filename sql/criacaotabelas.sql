@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 23-Maio-2018 às 17:17
+-- Generation Time: 25-Maio-2018 às 01:37
 -- Versão do servidor: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -48,7 +48,10 @@ CREATE TABLE `contato` (
 --
 
 INSERT INTO `contato` (`idcontato`, `nome`, `email`, `sexo`, `nascimento`, `cep`, `bairro`, `logradouro`, `estado`, `cidade`, `numero`, `complemento`) VALUES
-(2, 'Marcel Marques', 'xl@me.com', 'M', '1900-01-01', 58070820, 'Torre', 'Etelvina Macedo', 'PB', 'João Pessoa', '630', 'Apto 101 A					');
+(44, 'Marcel Marques', 'marcmatias@me.com', 'M', '1999-12-23', 58075820, 'Torre', 'Etelvina Macedo', 'PB', 'João Pessoa', '83', 'Apto 16'),
+(45, 'Aníbal Medeiros', 'anibal@gmail.com', 'M', '1988-12-23', 58075820, 'Bancários', 'Rua Teste', 'PB', 'João Pessoa', '33', 'Test'),
+(46, 'José Victor', 'jvictor@gmail.com', 'M', '1999-02-22', 58070987, 'Geisel', 'Rua Testando Rua', 'PB', 'João Pessoa', '33', 'Test'),
+(47, 'Bruna Araújo', 'brunaa@gmail.com', 'F', '1999-12-21', 990088, 'Valentina', 'Rua Testando Rua Test', 'PB', 'João Pessoa', '88', 'Testando');
 
 -- --------------------------------------------------------
 
@@ -67,7 +70,14 @@ CREATE TABLE `telefone` (
 --
 
 INSERT INTO `telefone` (`idcontato`, `idtelefone`, `telefone`) VALUES
-(2, 1, '121212121');
+(44, 40, '8332316261'),
+(44, 41, '83994441500'),
+(44, 42, '8332437029'),
+(45, 43, '8332375667'),
+(45, 44, '83995551465'),
+(46, 45, '8435565253'),
+(47, 46, '8332798878'),
+(47, 47, '83995461223');
 
 --
 -- Indexes for dumped tables
@@ -94,13 +104,13 @@ ALTER TABLE `telefone`
 -- AUTO_INCREMENT for table `contato`
 --
 ALTER TABLE `contato`
-  MODIFY `idcontato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idcontato` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `telefone`
 --
 ALTER TABLE `telefone`
-  MODIFY `idtelefone` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idtelefone` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- Constraints for dumped tables
@@ -110,7 +120,7 @@ ALTER TABLE `telefone`
 -- Limitadores para a tabela `telefone`
 --
 ALTER TABLE `telefone`
-  ADD CONSTRAINT `telefone_ibfk_1` FOREIGN KEY (`idcontato`) REFERENCES `contato` (`idcontato`);
+  ADD CONSTRAINT `telefone_ibfk_1` FOREIGN KEY (`idcontato`) REFERENCES `contato` (`idcontato`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
