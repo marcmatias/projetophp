@@ -1,10 +1,10 @@
-# Projeto Catálogo Telefonico
+# Projeto Catálogo Telefônico
 
 Acesso a catálogo de contatos. Sistema permite a opção de cadastrar um contato, editar e remover da lista. com finalidade de estudo, planejamento e desenvolvimento em PHP puro, parte das atividades da cadeira de PROGRAMAÇÃO DINÂMICA PARA WEB da UNIPÊ.
 
-### Prerequisitos
+### Pré-Requisitos
 
-Será necessário servidores Apache e banco MySQL para funcionamento do sistema.
+Será necessário Apache e banco MySQL para funcionamento do sistema.
 
 ```
 Banco está atualmente nomeado como: criacaotableas.sql
