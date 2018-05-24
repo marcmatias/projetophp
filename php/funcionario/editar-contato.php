@@ -12,6 +12,9 @@ $complemento = $_POST["complemento_txt"];
 $bairro = $_POST["bairro_txt"];
 $cidade = $_POST["cidade_txt"];
 $estado = $_POST["estado_txt"];
+$telefone = '3333';
+
+// $contato = $_GET["contato_slc"];
 
 //Iniciar a conexao e a consulta
 include("conexao.php");
@@ -25,12 +28,19 @@ if($num_regs == 1){
 	$consulta = "UPDATE `contato` SET `nome` = '$nome', `email` = '$email', `sexo` = '$sexo',
  `nascimento` = '$nascimento', `cep` = '$cep', `bairro` = '$bairro', `logradouro` = '$rua',
  `estado` = '$estado', `cidade` = '$cidade', `numero` = '$numero',
- `complemento` = '$complemento	' WHERE `contato`.`idcontato` = 2";
-
+ `complemento` = '$complemento' WHERE `email` = '$email'";
 
 	$executar_consulta = $conexao->query(utf8_encode($consulta));
 
-	$a = mysqli_error($executar_consulta);
+// início de planejamento de inserção de telefones já funcinoal
+	// $id = "SELECT idcontato FROM contato WHERE email like '$email'";
+	// $executar_consulta = $conexao->query(utf8_encode($id));
+	// $row = $executar_consulta->fetch_assoc();
+	// $id = $row['idcontato'];
+
+	// $consulta = "INSERT INTO `telefone` (`idcontato`,`idtelefone`,`telefone`) VALUES ($id, NULL, $telefone)";
+
+	$executar_consulta = $conexao->query(utf8_encode($consulta));
 
 	if($executar_consulta)
 		$mensagem = "O contato " .utf8_encode($nome). " foi editado";

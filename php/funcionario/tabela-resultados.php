@@ -10,7 +10,7 @@ $num_regs = $executar_consulta->num_rows;
 //echo $num_regs;
 if($num_regs==0)
 {
-    echo "<br /><br /><span class='mensagens'>Não existe registros nesta busca!!</span><br /><br />";
+    echo "<br><br><p class='text-center'>Não existe registros nesta busca!!</p>";
 }
 else
 {

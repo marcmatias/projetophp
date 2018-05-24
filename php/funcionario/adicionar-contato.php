@@ -13,6 +13,7 @@ $cidade = $_POST["cidade_txt"];
 $estado = $_POST["estado_txt"];
 $complemento = $_POST["complemento_txt"];
 $cep =$_POST["cep_txt"];
+
 //verificar se ja existe o email ja cadastrado
 include("conexao.php");
 $consulta = "select * from contato WHERE email='$email'";
@@ -27,10 +28,13 @@ if($num_regs == 0){
 
 	$consulta = "INSERT INTO contato (email,nome,sexo,nascimento,logradouro,numero,bairro,cidade,estado, complemento, cep) VALUES ('$email','$nome','$sexo','$nascimento','$rua','$numero','$bairro','$cidade','$estado', '$complemento', '$cep')";
 
-// início de planejamento de inserção de telefones
-// INSERT INTO `telefone` (`idcontato`, `idtelefone`, `telefone`) VALUES ('2', NULL, '121212121');
-
 	$executar_consulta = $conexao->query(utf8_encode($consulta));
+
+	// início de planejamento de inserção de telefones
+	// $consulta = "INSERT INTO `telefone` (`idcontato`, `idtelefone`, `telefone`) VALUES ('2', NULL, '2222')";
+	//
+	// $executar_consulta = $conexao->query(utf8_encode($consulta));
+	// $id = $conexao->insert_id;
 
 	if($executar_consulta)
 		$mensagem = "O contato " .utf8_encode($nome). " foi registrado";

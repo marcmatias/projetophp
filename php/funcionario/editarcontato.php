@@ -13,7 +13,6 @@
 					$consulta_contato = "SELECT * FROM contato WHERE
 					idcontato='$contato'";
 
-
 					$executar_consulta_contato = $conexao2->query($consulta_contato);
 					$registro_contato = $executar_consulta_contato->fetch_assoc();
 
