@@ -15,4 +15,4 @@ Banco está atualmente nomeado como: criacaotableas.sql
 * **Aníbal Medeiros** - *Back-end*
 * **Bruna Araújo** - *DBA*
 * **José Victor** - *Analista*
-* **JMarcel Marques** - *Front-End*
+* **Marcel Marques** - *Front-End*
