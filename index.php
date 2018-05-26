@@ -7,27 +7,27 @@ error_reporting(E_ALL ^ E_NOTICE);
 $op = $_GET["op"];
 switch($op){
 	case "add":
-		$conteudo = "php/funcionario/addcontato.php";
+		$conteudo = "php/contato/addcontato.php";
 		$titulo = "Adicionar Contatos";
 		break;
 
 	// case "apagar":
-	// 	$conteudo = "php/funcionario/apagarcontato.php";
+	// 	$conteudo = "php/contato/apagarcontato.php";
 	// 	$titulo = "Apagar Contatos";
 	// 	break;
 
 	case "editar":
-		$conteudo = "php/funcionario/editarcontato.php";
+		$conteudo = "php/contato/editarcontato.php";
 		$titulo = "Editar Contatos";
 		break;
 
 	case "consultas":
-		$conteudo = "php/funcionario/consultas.php";
+		$conteudo = "php/contato/consultas.php";
 		$titulo = "Pesquisar Contatos";
 		break;
 
 	default :
-		$conteudo = "php/funcionario/home.php";
+		$conteudo = "php/contato/home.php";
 		$titulo = "Catálogo Telefônico";
 		break;
 }
@@ -50,7 +50,7 @@ switch($op){
 	<body>
 		<header id="conteudo">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-			  <a class="navbar-brand" href="index.php">Catalogo Telefônico</a>
+			  <a class="navbar-brand text-center" href="index.php">Catalogo Telefônico</a>
 			  <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			    <span class="navbar-toggler-icon"></span>
 			  </button>
@@ -129,6 +129,6 @@ switch($op){
 	      //   });
 				// $("#cep").mask("99.999-999");
 		</script>
-		<?php include("php/funcionario/mensagens.php");?>
+		<?php include("php/contato/mensagens.php");?>
 	</body>
 </html>

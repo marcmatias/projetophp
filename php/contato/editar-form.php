@@ -1,4 +1,6 @@
 <div class="form-g	roup card-body">
+	<input type="hidden" id="id" class="config form-control" name="id_txt" title="ID"
+	value="<?php echo $registro_contato["idcontato"]; ?>" required />
 	<div class="form-group">
 		<label for="nome">Nome: </label>
 		<input type="text" id="nome" class="config form-control" name="nome_txt"
@@ -33,6 +35,24 @@
 		placeholder="Insira a data de nascimento" title="Data"
 		value="<?php echo $registro_contato["nascimento"]; ?>"
 		required />
+	</div>
+	<?php $registro_telefone = $executar_consulta_telefone->fetch_assoc() ?>
+ 	<input type="hidden" id="idtelefone0" class="config form-control" name="idtelefone0_txt" title="idtelefone" value="<?php echo $registro_telefone["idtelefone"]; ?>" required />
+	<div class="form-group">
+		<label for="telefone0">Contato tel/cel: </label>
+		<input type="text" value="<?php echo $registro_telefone["telefone"]; ?>" id="telefone0" class="config form-control telefone" name="telefone0_txt" placeholder="Insira o telefone" title="Telefone" />
+	</div>
+	<?php $registro_telefone = $executar_consulta_telefone->fetch_assoc() ?>
+	<input type="hidden" id="idtelefone1" class="config form-control" name="idtelefone1_txt" title="idtelefone" value="<?php echo $registro_telefone["idtelefone"]; ?>" required />
+	<div class="form-group">
+		<label for="telefone1">Contato tel/cel 2: </label>
+		<input type="text" value="<?php echo $registro_telefone["telefone"]; ?>" id="telefone1" class="config form-control telefone" name="telefone1_txt" placeholder="Insira o contato 2" title="Telefone" />
+	</div>
+	<?php $registro_telefone = $executar_consulta_telefone->fetch_assoc() ?>
+	<input type="hidden" id="idtelefone2" class="config form-control" name="idtelefone2_txt" title="idtelefone" value="<?php echo $registro_telefone["idtelefone"]; ?>" required />
+	<div class="form-group">
+		<label for="telefone2">Contato tel/cel 3: </label>
+		<input type="text" value="<?php echo $registro_telefone["telefone"]; ?>" id="telefone2" class="config form-control telefone" name="telefone2_txt" placeholder="Insira o contato 3" title="Telefone" />
 	</div>
 	<div class="form-group">
 		<label for="cep">CEP: </label>

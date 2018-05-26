@@ -9,25 +9,25 @@
                 <option value="email" <?php if($_GET["consulta_slc"] == "email"){ echo " selected";} ?>>Por Email</option>
                 <option value="inicial" <?php if($_GET["consulta_slc"] == "inicial"){ echo " selected";} ?>>Por Inicial</option>
                 <option value="telefone" <?php if($_GET["consulta_slc"] == "telefone"){ echo " selected";} ?>>Por Telefone</option>
-                
-            </select> 
+
+            </select>
             <?php
                 switch($_GET["consulta_slc"])
                 {
                     case "todos":
-                        include("php/funcionario/consulta-todos.php");
+                        include("php/contato/consulta-todos.php");
                         break;
                     case "email":
-                        include("php/funcionario/consulta-email.php");
+                        include("php/contato/consulta-email.php");
                         break;
                     case "inicial":
-                        include("php/funcionario/consulta-inicial.php");
+                        include("php/contato/consulta-inicial.php");
                         break;
                     case "telefone":
-                        include("php/funcionario/consulta-telefone.php");
+                        include("php/contato/consulta-telefone.php");
                         break;
-                    
-                } 
+
+                }
             ?>
         </fieldset>
     </div>
@@ -36,7 +36,7 @@
     window.onload = function()
     {
         var lista = document.getElementById("consulta-lista");
- 
+
         lista.onchange = function()
         {
             window.location="?op=consultas&consulta_slc="+lista.value;

@@ -1,4 +1,4 @@
-<form class="card" id="add-contato" name="add_frm" action="php/funcionario/adicionar-contato.php"
+<form class="card" id="add-contato" name="add_frm" action="php/contato/adicionar-contato.php"
 method="post" enctype="multipart/form-data"	>
 	<div class="form-group card-body">
 		<fieldset>

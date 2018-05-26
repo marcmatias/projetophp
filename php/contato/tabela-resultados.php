@@ -51,7 +51,7 @@ else
                         </td>
                         <td>
                             <a href="index.php?op=editar&contato_slc=<?= $registro['idcontato'] ?>" class="btn btn-primary" title="Editar Contato"><i class="material-icons icons">create</i></a>
-                            <a onclick="return confirm('ATENÇÃO! Todos os dados serão de <?= $registro['nome'] ?> serão perdidos ao proceder na exclusão.')" href="php/funcionario/apagar-contato.php?email_slc=<?= $registro['email'] ?>" class='btn btn-danger' title="Excluir Contato"><i class="material-icons icons">delete</i></a>
+                            <a onclick="return confirm('ATENÇÃO! Todos os dados serão de <?= $registro['nome'] ?> serão perdidos ao proceder na exclusão.')" href="php/contato/apagar-contato.php?email_slc=<?= $registro['email'] ?>" class='btn btn-danger' title="Excluir Contato"><i class="material-icons icons">delete</i></a>
                         </td>
                     </tr>
                 <?php

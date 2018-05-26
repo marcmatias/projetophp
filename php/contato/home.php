@@ -10,7 +10,7 @@
 	<span class="text-center">
 		<?php
 			$consulta = "SELECT * FROM contato";
-			include("php/funcionario/tabela-resultados.php");
+			include("php/contato/tabela-resultados.php");
 		?>
 	</span>
 </fieldset>
