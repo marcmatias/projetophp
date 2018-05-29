@@ -6,7 +6,8 @@
 	</div> -->
 	<!-- menssagens -->
 
-	<a href="index.php?op=add" id="btnnovo" title="Novo Contato" class="btn btn-primary"><i class="material-icons icons">add_circle</i> Novo</a>
+	<a href="index.php?op=add" id="btnnovo" title="Novo Contato" class="btn btn-primary">
+		<i class="material-icons icons">add_circle</i> Novo</a>
 	<span class="text-center">
 		<?php
 			$consulta = "SELECT * FROM contato";

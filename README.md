@@ -7,7 +7,7 @@ Acesso a catálogo de contatos. Sistema permite a opção de cadastrar um contat
 Será necessário Apache e banco MySQL para funcionamento do sistema.
 
 ```
-Banco está atualmente nomeado como: criacaotabelas.sql
+Banco está atualmente nomeado como: dbprojetophp.sql
 ```
 
 ## Autrores

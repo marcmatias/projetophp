@@ -11,9 +11,7 @@
 		<label for="email">Email: </label>
 		<input type="email" id="email" class="config form-control" name="email_txt"
 		placeholder="Insira o e-mail" title="E-mail"
-		value="<?php echo $registro_contato["email"]; ?>" disabled required />
-		<input type="hidden" name="email_hdn" value="<?php echo
-		$registro_contato["email"]; ?>" />
+		value="<?php echo $registro_contato["email"]; ?>" />
 	</div>
 	<div class="form-group">
 		<label for="m">Sexo: </label>
@@ -40,23 +38,23 @@
  	<input type="hidden" id="idtelefone0" class="config form-control" name="idtelefone0_txt" title="idtelefone" value="<?php echo $registro_telefone["idtelefone"]; ?>" required />
 	<div class="form-group">
 		<label for="telefone0">Contato tel/cel: </label>
-		<input type="text" value="<?php echo $registro_telefone["telefone"]; ?>" id="telefone0" class="config form-control telefone" name="telefone0_txt" placeholder="Insira o telefone" title="Telefone" />
+		<input minlength="10" maxlength="11"type="text" value="<?php echo $registro_telefone["telefone"]; ?>" id="telefone0" class="config form-control sonumero" name="telefone0_txt" placeholder="Insira o telefone" title="Telefone" />
 	</div>
 	<?php $registro_telefone = $executar_consulta_telefone->fetch_assoc() ?>
 	<input type="hidden" id="idtelefone1" class="config form-control" name="idtelefone1_txt" title="idtelefone" value="<?php echo $registro_telefone["idtelefone"]; ?>" required />
 	<div class="form-group">
 		<label for="telefone1">Contato tel/cel 2: </label>
-		<input type="text" value="<?php echo $registro_telefone["telefone"]; ?>" id="telefone1" class="config form-control telefone" name="telefone1_txt" placeholder="Insira o contato 2" title="Telefone" />
+		<input minlength="10" maxlength="11"type="text" value="<?php echo $registro_telefone["telefone"]; ?>" id="telefone1" class="config form-control sonumero" name="telefone1_txt" placeholder="Insira o contato 2" title="Telefone" />
 	</div>
 	<?php $registro_telefone = $executar_consulta_telefone->fetch_assoc() ?>
 	<input type="hidden" id="idtelefone2" class="config form-control" name="idtelefone2_txt" title="idtelefone" value="<?php echo $registro_telefone["idtelefone"]; ?>" required />
 	<div class="form-group">
 		<label for="telefone2">Contato tel/cel 3: </label>
-		<input type="text" value="<?php echo $registro_telefone["telefone"]; ?>" id="telefone2" class="config form-control telefone" name="telefone2_txt" placeholder="Insira o contato 3" title="Telefone" />
+		<input minlength="10" maxlength="11" type="text" value="<?php echo $registro_telefone["telefone"]; ?>" id="telefone2" class="config form-control sonumero" name="telefone2_txt" placeholder="Insira o contato 3" title="Telefone" />
 	</div>
 	<div class="form-group">
 		<label for="cep">CEP: </label>
-		<input type="number" id="cep" class="config form-control" name="cep_txt"
+		<input type="text" id="cep" class="config form-control sonumero" name="cep_txt"
 		placeholder="Insira o cep" title="cep"
 		value="<?php echo $registro_contato["cep"]; ?>" required />
 	</div>
@@ -68,7 +66,7 @@
 	</div>
 	<div class="form-group">
 		<label for="numero">Número: </label>
-		<input type="text" id="numero" class="config form-control" name="numero_txt"
+		<input type="text" id="numero" class="config form-control sonumero" name="numero_txt"
 		placeholder="Insira o número da casa" title="Número"
 		value="<?php echo $registro_contato["numero"]; ?>"	required />
 	</div>
@@ -76,7 +74,7 @@
 		<label for="complemento">Complemento: </label>
 		<input type="text" id="complemento" class="config form-control" name="complemento_txt"
 		placeholder="Insira o complemento" title="Complemento"
-		value="<?php echo $registro_contato["complemento"]; ?>"	required />
+		value="<?php echo $registro_contato["complemento"]; ?>" />
 	</div>
 	<div class="form-group">
 		<label for="bairro">Bairro: </label>
