@@ -24,7 +24,7 @@ $estado = $_POST["estado_txt"];
 // $contato = $_GET["contato_slc"];
 
 //Iniciar a conexao e a consulta
-include("/../conexao.php");
+include("conexao.php");
 $consulta = "SELECT * FROM `contato` WHERE `idcontato` = '$id'";
 $executar_consulta = $conexao->query($consulta);
 

@@ -1,6 +1,6 @@
 <?php
   if(empty($_GET["nome_slc"])){
-      include("/../conexao.php");
+      include("conexao.php");
   }
 
   $executar_consulta = $conexao->query($consulta);

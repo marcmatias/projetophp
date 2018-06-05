@@ -82,7 +82,7 @@ error_reporting(E_ALL ^ E_NOTICE);
   <script src="../js/jquery.toaster.js"></script>
   <?php
     if (isset($_POST['submit'])){
-      include("conexao.php");
+      include("/contato/conexao.php");
       session_start();
       $username=$_POST['username'];
       $password=$_POST['password'];

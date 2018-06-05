@@ -18,7 +18,7 @@
 
 
 	//verificar se ja existe o email ja cadastrado
-	include("/../conexao.php");
+	include("conexao.php");
 	$consulta = "select * from contato WHERE email='$email'";
 	$executar_consulta = $conexao->query($consulta);
 

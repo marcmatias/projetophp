@@ -6,7 +6,7 @@
 			<?php
 				if($_GET["contato_slc"]!=null){
 
-					include("/../conexao.php");
+					include("conexao.php");
 					$conexao2 = conectar();
 
 					$contato = $_GET["contato_slc"];
