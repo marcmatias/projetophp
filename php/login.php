@@ -1,11 +1,4 @@
 <!DOCTYPE html>
-<?php
-mb_internal_encoding("UTF-8");
-mb_http_output( "iso-8859-1" );
-ob_start("mb_output_handler");
-header("Content-Type: text/html; charset=ISO-8859-1",true);
-error_reporting(E_ALL ^ E_NOTICE);
- ?>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
@@ -82,7 +75,7 @@ error_reporting(E_ALL ^ E_NOTICE);
   <script src="../js/jquery.toaster.js"></script>
   <?php
     if (isset($_POST['submit'])){
-      include("/contato/conexao.php");
+      include("contato/conexao.php");
       session_start();
       $username=$_POST['username'];
       $password=$_POST['password'];
