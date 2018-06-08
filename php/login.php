@@ -1,3 +1,12 @@
+<?php 
+
+session_start();
+mb_internal_encoding("UTF-8");
+mb_http_output( "iso-8859-1" );
+ob_start("mb_output_handler");
+header("Content-Type: text/html; charset=ISO-8859-1",true);
+// error_reporting(E_ALL ^ E_NOTICE);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -76,7 +85,6 @@
   <?php
     if (isset($_POST['submit'])){
       include("contato/conexao.php");
-      session_start();
       $username=$_POST['username'];
       $password=$_POST['password'];
       // $_SESSION['login_user']=$username;
