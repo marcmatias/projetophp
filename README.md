@@ -17,5 +17,5 @@ Banco está atualmente nomeado como: dbprojetophp.sql
 * **José Victor** - *Analista*
 * **Marcel Marques** - *Front-End*
 
-## Demostração Online
+## Demonstração Online
 https://mepassa.clubeturismo.com.br
